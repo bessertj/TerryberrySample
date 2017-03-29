@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h2>A Terryberry sample application.</h2>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $.getJSON("http://localhost:57883/api/helloworld", function (data) {
+            var items = [];
+            $.each(data, function (key, val) {
+                items.push("<li id='" + key.Message + "'>" + val.Message + "</li>");
+            });
+
+            $("<ul/>", {
+                "class": "my-new-list",
+                html: items.join("")
+            }).appendTo("body");
+        });
+    </script>
+</body>
+</html>
