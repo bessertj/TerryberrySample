@@ -9,9 +9,11 @@ namespace TerryberrySample.Sample.Infrastructure
 {
     public class HelloWorldRepository : IHelloWorldRepository
     {
+        public HelloWorldContext db = new HelloWorldContext();
+
         public List<HelloWorld> GetAll()
         {
-            throw new NotImplementedException();
+            return db.HelloWorldEntities;
         }
     }
 }
