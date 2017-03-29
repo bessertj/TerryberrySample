@@ -10,11 +10,13 @@ namespace TerryberrySample.Sample.Infrastructure
     {
         public HelloWorldContext()
         {
+            HelloWorldEntities = new List<HelloWorld>();
             for (var i = 0; i <= 9; i++)
             {
                 HelloWorldEntities.Add(new HelloWorld { Message = "hello world" });
             }
         }
+
         public List<HelloWorld> HelloWorldEntities { get; set; }
     }
 }
