@@ -97,6 +97,7 @@
     <Compile Include="Sample.Abstract\IHelloWorldRepository.cs" />
     <Compile Include="Sample.API\Controllers\HelloWorldController.cs" />
     <Compile Include="Sample.Domain.Entities\HelloWorld.cs" />
+    <Compile Include="Sample.Infrastructure\HelloWorldContext.cs" />
     <Compile Include="Sample.Infrastructure\HelloWorldRepository.cs" />
   </ItemGroup>
   <ItemGroup>
